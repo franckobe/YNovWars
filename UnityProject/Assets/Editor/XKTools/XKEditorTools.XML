@@ -1,0 +1,2374 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XKEditorTools</name>
+    </assembly>
+    <members>
+        <member name="T:CreatePlane">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CreatePlane.Orientation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.Orientation.Horizontal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.Orientation.Vertical">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CreatePlane.AnchorPoint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.AnchorPoint.TopLeft">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.AnchorPoint.TopHalf">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.AnchorPoint.TopRight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.AnchorPoint.RightHalf">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.AnchorPoint.BottomRight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.AnchorPoint.BottomHalf">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.AnchorPoint.BottomLeft">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.AnchorPoint.LeftHalf">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.AnchorPoint.Center">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.m_WidthSegments">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.m_LengthSegments">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.m_Width">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.m_Length">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.m_Orientation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.m_Anchor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.m_AddCollider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.m_CreateAtOrigin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.m_OptionalName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CreatePlane.m_PathToMeshes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CreatePlane.CreatePlaneMesh(System.String,System.Boolean,CreatePlane.AnchorPoint,CreatePlane.Orientation,System.Single,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Create a simple plane with custom mesh
+            </summary>
+            <param name="optionalName">The name of the plane (optional)</param>
+            <param name="addCollider">Should we add a collider to this plane</param>
+            <param name="anchor">The anchor of the plane</param>
+            <param name="orientation">The orientation of the plane</param>
+            <param name="width">The width of the plane</param>
+            <param name="length">The length of the plane</param>
+            <param name="widthSegments">The number of segments for width</param>
+            <param name="lengthSegments">The number of segments for length</param>
+            <returns>The plane freshly created</returns>
+        </member>
+        <member name="M:CreatePlane.CreatePlaneMesh(System.String,System.String,System.Boolean,CreatePlane.AnchorPoint,CreatePlane.Orientation,System.Single,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Create a simple plane with custom mesh
+            </summary>
+            <param name="optionalName">The name of the plane (optional)</param>
+            <param name="pathToMesh">The path to find the mesh</param>
+            <param name="addCollider">Should we add a collider to this plane</param>
+            <param name="anchor">The anchor of the plane</param>
+            <param name="orientation">The orientation of the plane</param>
+            <param name="width">The width of the plane</param>
+            <param name="length">The length of the plane</param>
+            <param name="widthSegments">The number of segments for width</param>
+            <param name="lengthSegments">The number of segments for length</param>
+            <returns>The plane freshly created</returns>
+        </member>
+        <member name="T:XKEditorTools.Graphics.ShadowCreator">
+            <summary>
+            Tools to create shadows
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.Graphics.ShadowCreator.CreateShadowFor(UnityEngine.Transform,UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Material,System.String,System.Boolean,System.String,System.Int32,System.Boolean)">
+            <summary>
+            Create a Shadow
+            </summary>
+            <param name="trackedTrans">The transform that will be tracked by the shadow</param>
+            <param name="parent">The parent of the shadow (if not set, the tracked transform will be the parent)</param>
+            <param name="initialScale">The initial scale of the shadow</param>
+            <param name="mat">The material of the shadow</param>
+            <param name="shadowType">The type of shadow you want</param>
+            <param name="followTrackedForward">If you want the shadow to follow the tracked forward or if it doesn't matter</param>
+            <param name="name">The name of the shadow in the hierarchy</param>
+            <param name="raycastLayer">The layer the shadow will use to compute its position on y axis</param>
+            <param name="useFixedUpdate">If you want to use FixedUpdate for the given tracked trans (else, LateUpdate will be used)</param>
+            <returns>The ShadowScript instanciated</returns>
+        </member>
+        <member name="T:XKEditorTools.Importer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.Importer.ObjectLoader">
+            <summary>
+            
+            </summary>
+            <param name="assetPath"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XKEditorTools.Importer.SerializedPropertySetter">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="propertyName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="F:XKEditorTools.Importer.c_Tag">
+            <summary></summary>
+        </member>
+        <member name="M:XKEditorTools.Importer.Start">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.Importer.MaxClean(UnityEngine.Transform)">
+            <summary>
+            Cleans 3DS Max names
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.CleanAllUVs">
+            <summary>
+            Clean all temporary meshes created by <see cref="M:XKEditorTools.Importer.ApplyUVImmediate(XKTools.Graphics.ModifyUV)"/>
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.Importer.Import(System.Boolean)">
+            <summary>
+            This is the function to be called once the script's been added
+            </summary>
+            <param name="logDetails">Log each property when importing</param>
+        </member>
+        <member name="M:XKEditorTools.Importer.AnalyseNodeSuffix(UnityEngine.Transform,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnNoMore(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnChildProperties(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnSkipParentProperties(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnStatic(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnStaticRecursive(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnLayer(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnLayerRecursive(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnBehaviour(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnModifyUV(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnBoxCollider(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnSphereCollider(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnCapsuleCollider(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnMeshCollider(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnRigidbody(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnTrigger(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnKinematic(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnJoint(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnHingeJoint(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnInteractiveCloth(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnMaterial(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnNoRenderer(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnKickRenderer(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnDontCastShadows(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnDontReceiveShadows(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnDoubleSidedShadow(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnLightmapScale(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnAudioSource(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnDirectionalLight(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnSpotLight(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnPointLight(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="M:XKEditorTools.Importer.OnPrefab(UnityEngine.Transform,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+        </member>
+        <member name="P:XKEditorTools.Importer.CleanName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.Importer.ExtractObjectName">
+            <summary>
+            <para>This property means that the object name (on its root node) will be used to find Materials and Prefabs</para>
+            <example>AssetPath/ExtractedObjectName/MaterialToLoad.mat</example>
+            <example>AssetPath/ExtractedObjectName/PrefabToLoad.prefab</example>
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.Importer.Shadows">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.Importer.PushMaterialsPath(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.Importer.PushPhysicMaterialsPath(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.Importer.PushPrefabsPath(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.Importer.AssetLoader">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.Importer.PropertySetter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.MenuItems">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.MenuItems.Instance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.XKET">
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.XKET.ComparableObject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.ComparableObject.#ctor(UnityEngine.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="P:XKEditorTools.XKET.ComparableObject.Object">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.ComparableObject.CompareTo(XKEditorTools.XKET.ComparableObject)">
+            <summary>
+            
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.XKET.Initialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.EnableLogs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.RemoveAllScriptsOnGameObject(UnityEngine.GameObject,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="cpt"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.CleanPath(System.String)">
+            <summary>
+            transforms a full path "k:/UnityProject/Assets/Resources/" to a clean Unity path "Assets/Resources"
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.XKET.GetAssetDatabasePath(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.XKET.GetSelectedObjects``1">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.XKET.LoadObjectAtPath(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <param name="setAsSelection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.XKET.InstantiateAsset(UnityEngine.GameObject@)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.GetImportableGameObjects(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="rootPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.XKET.GetImportableTextures(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="rootPath"></param>
+            <returns></returns>
+        </member>
+        <member name="P:XKEditorTools.XKET.ProductName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.XKET.EBuildOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.EBuildOptions.None">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.EBuildOptions.Dev">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.EBuildOptions.Script">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.EBuildOptions.Profiler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.EBuildOptions.IL2CPP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.XKET.SToggleOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.SToggleOptions.Dev">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.SToggleOptions.Script">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.SToggleOptions.Profiler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.SToggleOptions.IL2CPP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.XKET.BuildInfos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.BuildInfos.c_DefaultOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.BuildInfos.m_ExecutableName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.BuildInfos.m_PlatformFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.BuildInfos.m_Extension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.BuildInfos.m_TerminalSeparator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.BuildInfos.m_Target">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.BuildInfos.m_Options">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.BuildInfos.m_AvailableGuiOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.BuildInfos.#ctor(UnityEditor.BuildTarget,XKEditorTools.XKET.EBuildOptions,System.String,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.BuildInfos.#ctor(UnityEditor.BuildTarget,XKEditorTools.XKET.EBuildOptions,System.String,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.BuildInfos.#ctor(UnityEditor.BuildTarget,XKEditorTools.XKET.EBuildOptions,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.XKET.OnBuildDLG">
+            <summary>
+            
+            </summary>
+            <param name="target"></param>
+        </member>
+        <member name="F:XKEditorTools.XKET.c_BuildPath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.m_OnPreBuild">
+            <summary>
+            Remove some files from the project using this delegate
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.m_OnPostBuild">
+            <summary>
+            Revert some files from the project using this delegate
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.m_SceneFolder">
+            <summary>
+            The current scene used when building auto (Ctrl+Shit+W for instance)
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.m_AbsoluteBuildFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.XKET.SceneFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.XKET.PreconfiguredBuilds">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.AddBuild(UnityEditor.BuildTarget,XKEditorTools.XKET.EBuildOptions,System.String,System.String,System.Boolean)">
+            <summary>
+            Adds a build configuration to m_PreconfiguredBuilds
+            </summary>
+            <param name="target">Build target for this configuration</param>
+            <param name="options">Build options to activate</param>
+            <param name="path">Export path for the build</param>
+            <param name="extension">Executable extension (.exe, .app, etc.)</param>
+            <param name="terminalSeparator">Should we include the terminal separator?</param>
+        </member>
+        <member name="M:XKEditorTools.XKET.AddBuild(UnityEditor.BuildTarget,XKEditorTools.XKET.EBuildOptions,System.String,System.String)">
+            <summary>
+            Adds a build configuration to m_PreconfiguredBuilds
+            </summary>
+            <param name="target">Build target for this configuration</param>
+            <param name="options">Build options to activate</param>
+            <param name="path">Export path for the build</param>
+            <param name="extension">Executable extension (.exe, .app, etc.)</param>
+        </member>
+        <member name="M:XKEditorTools.XKET.AddBuild(UnityEditor.BuildTarget,XKEditorTools.XKET.EBuildOptions,System.String)">
+            <summary>
+            Adds a build configuration to m_PreconfiguredBuilds
+            </summary>
+            <param name="target">Build target for this configuration</param>
+            <param name="options">Build options to activate</param>
+            <param name="path">Export path for the build</param>
+        </member>
+        <member name="M:XKEditorTools.XKET.InitializePreconfiguredBuilds">
+            <summary>
+            Method initializing all build configurations
+            For any change in this function, there should be a similar change in BuilderCategory.InitAllPlatforms().
+            For exemple, if we were to add the configuration for XBox One, we should add the following lines :
+            In InitializePreconfiguredBuilds() :
+                AddBuild(BuildTarget.XboxOne, EBuildOptions.Dev | EBuildOptions.Script, "XboxOne");
+            In BuilderCategory.InitAllPlatforms() : 
+                InitPlatform("Consoles", "XBoxOne", BuildTarget.XboxOne);
+            <see cref="M:XKEditorTools.BuilderCategory.InitAllPlatforms"/>
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.PrepareMain(XKTools.GameGeneric.Main)">
+            <summary>
+            
+            </summary>
+            <param name="main"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.RunBuild(System.String[],System.String,System.String,UnityEditor.BuildTarget,UnityEditor.BuildOptions)">
+            <summary>
+            
+            </summary>
+            <param name="scenes"></param>
+            <param name="folder"></param>
+            <param name="executableName"></param>
+            <param name="target"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.RunBuild(System.String,System.String,System.String,UnityEditor.BuildTarget,UnityEditor.BuildOptions)">
+            <summary>
+            
+            </summary>
+            <param name="scene"></param>
+            <param name="folder"></param>
+            <param name="executableName"></param>
+            <param name="target"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.GetRevision">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.XKET.GetPreconfiguredBuild(UnityEditor.BuildTarget)">
+            <summary>
+            
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.XKET.BuildHelp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.GenerateBuildFolder(XKEditorTools.XKET.BuildInfos,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="infos"></param>
+            <param name="scene"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.XKET.GenerateBuildFolder(XKEditorTools.XKET.SToggleOptions,XKEditorTools.XKET.BuildInfos,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+            <param name="infos"></param>
+            <param name="scene"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.XKET.GenerateExecutableName(XKEditorTools.XKET.BuildInfos,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="infos"></param>
+            <param name="scene"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.XKET.GenerateExecutableName(XKEditorTools.XKET.SToggleOptions,XKEditorTools.XKET.BuildInfos,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+            <param name="infos"></param>
+            <param name="scene"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.XKET.IsOptionAvailable(XKEditorTools.XKET.BuildInfos,XKEditorTools.XKET.EBuildOptions)">
+            <summary>
+            
+            </summary>
+            <param name="infos"></param>
+            <param name="opt"></param>
+            <returns></returns>
+        </member>
+        <member name="F:XKEditorTools.XKET.c_GraphicsFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.c_ResGraphicsFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.c_TextureFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.c_AtlasFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.c_ShaderFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.c_ResShaderFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.c_FxFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.XKET.c_AnimCtrlFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.RemoveAllScripts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.RemoveAllParticleSystem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.DetectNonConvexMeshColliders">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.DetectUniqueTextures">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.DetectMissingScripts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.DetectMissingMeshes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.DetectScripts(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.DetectAudioListener">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.DetectStaticGameObjects">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.DetecteUnusedLayers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.ShowMTRenderingStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.SwitchMTRenderingStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.UpdateMTRenderingStatus(System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.HelperHelp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.DontCastShadows">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.DontReceiveShadows">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.AlignOnX">
+            <summary>
+            Align all the selected transforms on x axis (all the selected elements will have the same y position)
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.AlignOnY">
+            <summary>
+            Align all the selected transforms on y axis (all the selected elements will have the same x position)
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.SpaceOutSelectionX(System.Single,System.String)">
+            <summary>
+            Space out the selected objects according to the given decal on x-axis
+            </summary>
+            <param name="decalX">The decal to apply</param>
+            <param name="prefix">The prefix for transform ordering</param>
+        </member>
+        <member name="M:XKEditorTools.XKET.SpaceOutSelectionY(System.Single,System.String)">
+            <summary>
+            Space out the selected objects according to the given decal on y-axis
+            </summary>
+            <param name="decalY">The decal to apply</param>
+            <param name="prefix">The prefix for transform ordering</param>
+        </member>
+        <member name="M:XKEditorTools.XKET.OnPreprocessModel(UnityEditor.ModelImporter)">
+            <summary>
+            Override this function to change model import base settings
+            </summary>
+            <param name="mi"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.OnPostprocessModel(UnityEngine.GameObject)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.OnPreprocessTexture(UnityEditor.TextureImporter)">
+            <summary>
+            Override this function to change texture import base settings
+            </summary>
+            <param name="ti"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.ImportGeneric">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.SetFloatSerializedProperty(UnityEngine.Object,System.String,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="propertyName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.SetEnumSerializedProperty(UnityEngine.Object,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="propertyName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.SetIntSerializedProperty(UnityEngine.Object,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="propertyName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.ImporterHelp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.GetImportedModelDefaultShader">
+            <summary>
+            Override this function to change the default shader used in imported models
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.AddTrailRenderer(UnityEngine.Transform,System.String,System.Single,System.Single,System.Single)">
+            <summary>
+            Add a trail renderer for the given transform
+            </summary>
+            <param name="parent">The transform the trail will follow</param>
+            <param name="matPath">The complete path to the wanted Trail's material</param>
+            <param name="startWidth">The start width of the trail</param>
+            <param name="endWidth">The end width of the trail</param>
+            <param name="time">The life duration of the trail</param>
+        </member>
+        <member name="M:XKEditorTools.XKET.SetupSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateDirectories">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreatePlayerDiretories">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateExtentions(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.UpdateLocalizationCharset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.ProjectHelp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.ChangeSoundFormat_Std">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.SoundHelp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.NPOTScale_Compressed_NotReadable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.NPOTScale_ARGB32_Readable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.NPOTScale_AutoTrueColor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.NPOTScale_RGB16_MM">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.FormatHelp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlasFromSelection512">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlasFromSelection1024">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlasFromSelection2048">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlasFromSelection4096">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.AtlasHelp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.SetMaxSizeToNearestPowerOf2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.SetMaxSizeToNearestPowerOf2DividedBy2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.SetMaxSizeTo512">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.SizeHelp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.TexturesHelp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.MakeReadable(UnityEngine.Object[])">
+            <summary>
+            
+            </summary>
+            <param name="textures"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.SetFormat(UnityEngine.Object[],UnityEditor.TextureImporterCompression,UnityEditor.TextureImporterNPOTScale,System.Boolean,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="textures"></param>
+            <param name="compression"></param>
+            <param name="powerOfTo"></param>
+            <param name="readable"></param>
+            <param name="mipMap"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlasFromSelection(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="atlasName"></param>
+            <param name="texPathOut"></param>
+            <param name="size"></param>
+            <param name="padding"></param>
+            <param name="overScale">OverScale in pixels</param>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlasFromSelection(System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="atlasName"></param>
+            <param name="texPathOut"></param>
+            <param name="size"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlasFromSelection(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="size"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlas(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="sourceFolder"></param>
+            <param name="atlasName"></param>
+            <param name="texPathOut"></param>
+            <param name="size"></param>
+            <param name="padding"></param>
+            <param name="overScale">OverScale of the textures in pixels</param>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlas(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="sourceFolder"></param>
+            <param name="atlasName"></param>
+            <param name="texPathOut"></param>
+            <param name="size"></param>
+            <param name="padding"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlas(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="sourceFolder"></param>
+            <param name="atlasName"></param>
+            <param name="texPathOut"></param>
+            <param name="size"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlas(System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="sourceFolder"></param>
+            <param name="atlasName"></param>
+            <param name="size"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlas(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="sourceFolder"></param>
+            <param name="atlasName"></param>
+            <param name="size"></param>
+            <param name="padding"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlas(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="sourceFolder"></param>
+            <param name="atlasName"></param>
+            <param name="size"></param>
+            <param name="padding"></param>
+            <param name="overScale">OverScale of the textures in pixel</param>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlas(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="sourceFolder"></param>
+            <param name="size"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlas(System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="sourceFolder"></param>
+            <param name="size"></param>
+            <param name="padding"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.CreateAtlas(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="sourceFolder"></param>
+            <param name="size"></param>
+            <param name="padding"></param>
+            <param name="overScale">OverScale of the textures in pixel</param>
+        </member>
+        <member name="M:XKEditorTools.XKET.GetMaxPowerOfTwo(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="s"></param>
+            <param name="minRange"></param>
+            <param name="maxRange"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.XKET.ComputeMaxSize(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="divideBy2"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.SetMaxSizeFromSource(System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="maxSize"></param>
+            <param name="divideBy2"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.SetMaxSize(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="maxSize"></param>
+        </member>
+        <member name="M:XKEditorTools.XKET.ModifyUVs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.RevertUVs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKET.UVsHelp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.BuilderCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.BuilderCategory.CategoryData">
+            <summary>
+            Class representing a Category.
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.BuilderCategory.CategoryData.m_CategoryName">
+            <summary>
+            Name of the category. Used for Display and Dictionnary Keys
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.BuilderCategory.CategoryData.m_Platforms">
+            <summary>
+            List of all platforms associated to this category
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.CategoryData.#ctor(System.String,System.Collections.Generic.List{XKEditorTools.BuilderCategory.PlatformData})">
+            <summary>
+            Full Constructor
+            </summary>
+            <param name="categoryName">Name of the category</param>
+            <param name="platforms">List of all platforms</param>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.CategoryData.#ctor(System.String)">
+            <summary>
+            Recommended Constructor. Initializes the platform list as an empty List.
+            </summary>
+            <param name="categoryName">Name of the category</param>
+        </member>
+        <member name="T:XKEditorTools.BuilderCategory.PlatformData">
+            <summary>
+            Class representing a Platform to export to.
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.BuilderCategory.PlatformData.m_Target">
+            <summary>
+            Target for the build
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.BuilderCategory.PlatformData.m_DisplayName">
+            <summary>
+            Name used at display
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.BuilderCategory.PlatformData.Name">
+            <summary>
+            Accessor for the name used for Dictionnary keys
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.PlatformData.#ctor(UnityEditor.BuildTarget,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="platform">Target for the build</param>
+            <param name="displayName">Name used at display</param>
+        </member>
+        <member name="F:XKEditorTools.BuilderCategory.c_MinWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.BuilderCategory.c_MinHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.BuilderCategory.m_BundleVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.BuilderCategory.Instance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.Label">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.HelpMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.OnGui">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.MinSize(System.Int32@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.Init(XKTools.SaveFile)">
+            <summary>
+            Initializes the save file by checking each required fields, and creating them with default values if not found.
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.Load(XKTools.SaveFile)">
+            <summary>
+            Loads data from the save file
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.Save(XKTools.SaveFile)">
+            <summary>
+            Saves data to the save file
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.FillScene(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sceneName"></param>
+            <returns>false if build can't continue</returns>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.InitAllPlatforms">
+            <summary>
+            Initialises the build platforms and categories.
+            For any changes to this function, there should be a similar change in XKET.InitializePreconfiguredBuilds(). (In file XKET_Builder.cs)
+            For exemple, if we were to add the configuration for XBox One, we should add the following lines :
+            In InitAllPlatforms() : 
+                InitPlatform("Consoles", "XBoxOne", BuildTarget.XboxOne);
+            In XKET.InitializePreconfiguredBuilds() :
+                AddBuild(BuildTarget.XboxOne, XKET.EBuildOptions.Dev | XKET.EBuildOptions.Script, "XboxOne");
+            <see cref="M:XKEditorTools.XKET.InitializePreconfiguredBuilds"/>
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.Init">
+            <summary>
+            Initializes the data (categories, platforms, etc.) to default values and loads scenes.
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.GetCategory(System.String)">
+            <summary>
+            Method to retreive a CategoryData from m_Categories. Will create the category if it doesn't exist yet.
+            </summary>
+            <param name="name">Name of the category</param>
+            <returns>The CategoryData object representing the category</returns>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.InitPlatform(System.String,System.String,UnityEditor.BuildTarget)">
+            <summary>
+            Creates a platform in the given category. If the category doesn't exists, it will be created.
+            </summary>
+            <param name="category">Name of the category</param>
+            <param name="name">Display name of the platform</param>
+            <param name="bt">BuildTarget associated with the platform</param>
+            <returns>The PlatformData representing the Platform</returns>
+        </member>
+        <member name="M:XKEditorTools.BuilderCategory.ClearDirectory(System.String,System.Int32)">
+            <summary>
+            Ensures that the given directory does not exist
+            by deleting its content.
+            </summary>
+            <param name="path"></param>
+            <param name="attempt"></param>
+        </member>
+        <member name="T:XKEditorTools.Drawing">
+            <summary>
+            Class from http://forum.unity3d.com/threads/71979-Drawing-lines-in-the-editor
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.Drawing.aaLineTex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.Drawing.lineTex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.Drawing.DrawLine(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Color,System.Single,System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.Drawing.bezierLine(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Color,System.Single,System.Boolean,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.GuiBuilder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.GuiBuilder.EmbeddedGui">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.EmbeddedGui.OnGui">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.EmbeddedGui.MinSize(System.Int32@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.EmbeddedGui.Init(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+            <param name="savefile"></param>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.EmbeddedGui.Load(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+            <param name="savefile"></param>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.EmbeddedGui.Save(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+            <param name="savefile"></param>
+        </member>
+        <member name="T:XKEditorTools.GuiBuilder.Category">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.GuiBuilder.Category.m_HeightSpace">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.GuiBuilder.Category.Builder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.GuiBuilder.Category.XKET">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.GuiBuilder.Category.AdditionalGui">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.Category.Label">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.Category.HelpMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.Category.AddGui(XKEditorTools.GuiBuilder.EmbeddedGui)">
+            <summary>
+            
+            </summary>
+            <param name="gui"></param>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.Category.TotalMinSize(System.Int32@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.Category.Init(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+            <param name="saveFile"></param>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.Category.Load(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+            <param name="saveFile"></param>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.Category.Save(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+            <param name="saveFile"></param>
+        </member>
+        <member name="T:XKEditorTools.GuiBuilder.ButtonAction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.GuiBuilder.c_HorizontalMargin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.GuiBuilder.c_TopMargin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.GuiBuilder.c_TopSpacing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.GuiBuilder.c_LineHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.GuiBuilder.c_BottomMargin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.GuiBuilder.c_SeparatorHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.GuiBuilder.s_SeparatorColor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.GuiBuilder.HorizontalMargin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.GuiBuilder.TopMargin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.GuiBuilder.BottomMargin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.GuiBuilder.LineHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.GuiBuilder.CurrentBottomHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.Initialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.OnGui">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.GetCategory(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="label"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.AddCategory(XKEditorTools.GuiBuilder.Category)">
+            <summary>
+            
+            </summary>
+            <param name="category"></param>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.RemoveCategory(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="label"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.GetArea(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="count"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.GetArea(System.Int32,System.Int32,System.Int32,System.Int32)">
+             <summary>
+             Get the index-th horizontal slice of the screen
+             if we assume that it is split into 'count' parts
+             example:
+            
+             Screen
+             +---------------+---------------+---------------+
+             |               |               |               |
+             | GetArea(0, 3) | GetArea(1, 3) | GetArea(2, 3) |
+             |               |               |               |
+             +---------------+---------------+---------------+
+            
+             `span` can be used to merge several areas. For exemple,
+             an area starting on index 2 with a `span` value of 2 will
+             be twice larger than a normal area and the next free spot will
+             be the area at index 4 (and not 3).
+             </summary>
+             <param name="index"></param>
+             <param name="count"></param>
+             <param name="span"></param>
+             <param name="height"></param>
+             <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.BeginArea(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="left"></param>
+            <param name="top"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.BeginArea(UnityEngine.Rect)">
+            <summary>
+            
+            </summary>
+            <param name="area"></param>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.EndArea">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.MaxAreaWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.MaxAreaHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.Button(System.String,XKEditorTools.GuiBuilder.ButtonAction)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.TextField(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <param name="maxWidth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.Button(System.String,System.Int32,XKEditorTools.GuiBuilder.ButtonAction)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+            <param name="maxWidth"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.InitSaveFile(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.LoadPrefs(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.SavePrefs(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.CreateTexturesCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.CreateHelpersCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.CreateProjectCategory">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.CreateBuilderCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.CreateSoundCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.CreateImportersCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.UpdateCurrentCategory(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ind"></param>
+        </member>
+        <member name="M:XKEditorTools.GuiBuilder.CurrentCategoryIndex">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XKEditorTools.HelpersCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.HelpersCategory.c_MinWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.HelpersCategory.c_MinHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.HelpersCategory.Label">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.HelpersCategory.HelpMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.HelpersCategory.OnGui">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.HelpersCategory.MinSize(System.Int32@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:XKEditorTools.HelpersCategory.Init(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.HelpersCategory.Load(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.HelpersCategory.Save(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.ImportersCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.ImportersCategory.c_MinWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.ImportersCategory.c_MinHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.ImportersCategory.c_ButtonsWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.ImportersCategory.Label">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.ImportersCategory.HelpMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.ImportersCategory.OnGui">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.ImportersCategory.MinSize(System.Int32@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="T:XKEditorTools.ProjectCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.ProjectCategory.c_MinWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.ProjectCategory.c_MinHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.ProjectCategory.c_ButtonsWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.ProjectCategory.c_LabelWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.ProjectCategory.c_TextFieldWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.ProjectCategory.Label">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.ProjectCategory.HelpMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.ProjectCategory.OnGui">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.ProjectCategory.MinSize(System.Int32@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:XKEditorTools.ProjectCategory.Init(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+            <param name="saveFile"></param>
+        </member>
+        <member name="M:XKEditorTools.ProjectCategory.Load(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+            <param name="saveFile"></param>
+        </member>
+        <member name="M:XKEditorTools.ProjectCategory.Save(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+            <param name="saveFile"></param>
+        </member>
+        <member name="T:XKEditorTools.SoundCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.SoundCategory.c_MinWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.SoundCategory.c_MinHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.SoundCategory.c_ButtonsWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.SoundCategory.Label">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.SoundCategory.HelpMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.SoundCategory.OnGui">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.SoundCategory.MinSize(System.Int32@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="T:XKEditorTools.TexturesCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.TexturesCategory.EAtlasSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.EAtlasSize.Max512">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.EAtlasSize.Max1024">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.EAtlasSize.Max2048">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.EAtlasSize.Max4096">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.TexturesCategory.ETextureFormat">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.ETextureFormat.NPOTCompressedNotReadable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.ETextureFormat.NPOTArgb32Readable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.ETextureFormat.NPOTAutoTrueColor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.ETextureFormat.NPOTRgb16MipMap">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.TexturesCategory.ETextureSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.ETextureSize.HighDefinition">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.ETextureSize.LowDefinition">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.ETextureSize.Max1024">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.c_MinWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.c_MinHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.c_ButtonsWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.c_AreaCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.c_AtlasButtonsWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.m_AtlasMaxSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.c_SettingsButtonsWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.m_TextureFormat">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XKEditorTools.TexturesCategory.m_TextureSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.TexturesCategory.Label">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XKEditorTools.TexturesCategory.HelpMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.TexturesCategory.OnGui">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.TexturesCategory.MinSize(System.Int32@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:XKEditorTools.TexturesCategory.Init(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.TexturesCategory.Load(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.TexturesCategory.Save(XKTools.SaveFile)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XKEditorTools.XKEditorWindow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.XKEditorWindow.Instance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.XKEditorWindow.XKETInstance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.XKEditorWindow.GBInstance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XKEditorTools.XKEditorWindow.PrefsFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKEditorWindow.Init">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKEditorWindow.InitSaveFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKEditorWindow.LoadPrefs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XKEditorTools.XKEditorWindow.SavePrefs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:AssetPostProcess">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
